@@ -1,0 +1,118 @@
+//TEXT SIZES VARIABLES
+//_____________________
+$size-a: 11px;
+$size-b: 12px;
+$size-c: 14px;
+$size-d: 16px;
+$size-e: 18px;
+$size-f: 28px;
+$size-g: 30px;
+$size-h: 36px;
+$size-i: 48px;
+$size-j: 73px;
+$size-k: 87px;
+$size-special: 50px;
+
+//COLOR VARIABLES
+//________________
+$fuchsia-color: #FF00E4;
+$green-color: #C0FF00;
+$aquamarine-color: #2CFFFB;
+$yellow-color: #FFA200;
+$dark-brown-color: #2A190E;
+$light-brown-color: #59402D;
+$light-grey: #F2F2F4;
+$white-color: #FFF;
+$black-color: #000;
+
+//GRADIENT COLORS
+//________________
+$gradiente-grey-a: #FEFEFE;
+$gradiente-grey-b: #FBFBFB;
+$gradiente-grey-c: #F7F7F7;
+$gradiente-grey-d: #F0F0F0;
+$gradiente-grey-e: #EAEAEA;
+$gradiente-grey-f: #E6E6E6;
+$gradiente-grey-g: #E3E3E3;
+$gradiente-grey-h: #E0E0E0;
+
+//TEXT STYLES VARIABLES
+//______________________
+$passionone-b: 'PassionOne-Black';
+$passionone-r: 'PassionOne-Regular';
+$montserrat-b: 'Montserrat-Bold';
+$montserrat-r: 'Montserrat-Regular';
+
+$text-weight: 400;
+$text-transform: none;
+
+@font-face {
+	font-family: $passionone-b;
+	src: 
+		url('../fonts/PassionOne-Black/PassionOne-Black.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/PassionOne-Black/PassionOne-Black.woff') format('woff'), 
+		url('../fonts/PassionOne-Black/PassionOne-Black.ttf')  format('truetype'),
+		url('../fonts/PassionOne-Black/PassionOne-Black.svg#PassionOne-Black') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+	font-family: $passionone-r;
+ 	 src:
+		url('../fonts/PassionOne-Regular/PassionOne-Regular.eot?#iefix') format('embedded-opentype'), 
+		url('../fonts/PassionOne-Regular/PassionOne-Regular.woff') format('woff'), 
+		url('../fonts/PassionOne-Regular/PassionOne-Regular.ttf')  format('truetype'), 
+		url('../fonts/PassionOne-Regular/PassionOne-Regular.svg#PassionOne-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: $montserrat-b;
+	src:
+		url('../fonts/Montserrat-Bold/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Montserrat-Bold/Montserrat-Bold.woff') format('woff'), 
+		url('../fonts/Montserrat-Bold/Montserrat-Bold.ttf')  format('truetype'), 
+		url('../fonts/Montserrat-Bold/Montserrat-Bold.svg#Montserrat-Bold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: $montserrat-r;
+	src:
+		url('../fonts/Montserrat-Regular/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Montserrat-Regular/Montserrat-Regular.woff') format('woff'),
+		url('../fonts/Montserrat-Regular/Montserrat-Regular.ttf')  format('truetype'),
+		url('../fonts/Montserrat-Regular/Montserrat-Regular.svg#Montserrat-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+//MAPS
+//________________
+$image-directory: (general: '../images/general/', coconut: '../images/coconut/', portfolio: '../images/portfolio/');
+  
+$size-media-query: (mobile: 450px, tablet: 767px, mini-desktop: 991px, desktop: 1024px, bigdesktop: 1025px, extrabigdesktop: 1576px);
+
+//IMPORTED FILES
+//________________
+@import 'style-mixin';
+@import 'style-extend';
+@import 'style-generic';
+@import 'style-header';
+@import 'style-footer';
+@import 'style-buttons';
+@import 'style-left-menu';
+
+@import 'style-body-coconut';
+@import 'style-body-portafolio';
+@import 'style-body-contacto';
+
+@import 'style-mediaquery-extrabigdesktop';
+@import 'style-mediaquery-bigdesktop';
+@import 'style-mediaquery-desktop';
+@import 'style-mediaquery-minidesktop';
+@import 'style-mediaquery-tablet';
+@import 'style-mediaquery-mobile';

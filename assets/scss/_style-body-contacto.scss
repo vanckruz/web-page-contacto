@@ -1,0 +1,97 @@
+#contacto{
+	a{
+		&.light-brown-button{
+			margin-top: 30px;
+		}
+	}
+	p{
+		@include text-style ($montserrat-r, $size-c, $white-color, $text-weight, uppercase);
+		margin: 0px;
+
+		span{
+			font-size: $size-f;
+			padding-left: 20px;
+			vertical-align: middle;
+		}
+	}
+	.row{
+		&.mail{
+			@include background-images (general, white-mail, png, center left, transparent);
+			margin: 0px;
+			padding-left: 45px;
+
+			a{
+				@include text-style ($montserrat-r, $size-c, $white-color, $text-weight, uppercase);
+				display: block;
+
+				&:hover, &:active, &:focus{
+					text-decoration: none;
+					color: $white-color;
+				}
+			}
+		}
+	}
+}
+
+
+#contacto-desplegado{
+	@include top-and-bottom-padding (45px, 45px);
+	background: $light-grey;
+
+	p{
+		@include text-style ($montserrat-r, $size-c, $dark-brown-color, $text-weight, uppercase);
+
+		span{
+			&.little{
+				font-size: $size-a;
+			}
+			&.captcha{
+				float: left;
+				margin-top: 12px;
+			}	
+		}
+	}
+	select{
+		&.form-control{
+			margin-bottom: 45px;
+		}
+	}
+	textarea{
+		&.form-control{
+			min-height: 100px;
+		}
+	}
+	
+	.col-md-6{
+		.col-md-4{
+			@include lateral-padding (0px, 0px);
+		}
+	}
+	.col-md-8{
+		@include lateral-padding (0px, 0px);
+	}
+	.form-control{
+		@include generate-prefixes (border-radius, 0px);
+		border: 1px solid $dark-brown-color;
+		background: $light-grey;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		min-height: 45px;
+
+		&.captcha{
+			float: right;
+			margin-left: 10px;
+		}
+	}
+}
+
+#button-contacto-desplegado{
+	background: $light-brown-color;
+	text-align: center;
+	display: none;
+	margin-bottom: 35px;
+
+	&.active{
+		display: block;
+	}
+}

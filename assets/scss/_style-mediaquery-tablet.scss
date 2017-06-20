@@ -1,0 +1,174 @@
+//MEDIA QUERY TABLET 451PX - 767PX 
+//******************************
+@include generate-media-query (tablet){
+	//STYLE HEADER
+	header{
+		section{
+			&#header{
+				text-align: center;
+				padding-top: 30px;
+
+				.col-md-4{
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+	//END STYLE HEADER
+
+	//STYLE FOOTER
+	footer{
+		
+	}
+	//END STYLE FOOTER
+
+	//STYLE LEFT MENU
+	#left-menu{
+		width: 100%;
+
+		a{
+			&.close-button{
+				padding-bottom: 20px;
+			}
+		}
+
+		ul{
+			li{
+				a{
+					font-size: 42px;
+				}
+			}
+		}
+
+		.col-md-4{
+			position: fixed;
+			bottom: 0;
+			padding: 15px !important;
+
+			a{
+				&.close-button{
+					padding-bottom: 20px;
+				}
+			}
+		}
+
+		.row{
+			&.mail{
+				p{
+					font-size: $size-b;
+				}
+			}
+		}
+	}
+	.left-menu-details{
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+
+		h1{
+			font-size: $size-i;
+
+			span{
+				font-size: $size-h;
+			}
+		}
+	}
+	//STYLE LEFT MENU
+
+	//NOSOTROS STYLE
+	#coconut-details{
+		.container-fluid{
+			.col-md-6{
+				text-align: center !important;
+
+				&:last-of-type{
+					a{
+						&.close-button{
+							position: absolute;
+							top: 15px;
+							right: 15px;
+						}
+					}
+				}
+			}
+
+			.row{
+				&.special-list{
+					img{
+						&:nth-of-type(2), &:last-of-type{
+							left: 340px !important;
+						}
+					}
+				}
+			}
+		}
+	}
+	//END NOSOTROS STYLE
+
+	//PORTAFOLIO STYLE
+	#portafolio{
+		.col-md-6{
+			min-height: auto !important;
+
+			h2{
+				font-size: $size-i;
+
+				span{
+					font-size: $size-g;
+				}
+			}
+
+			.col-md-12{
+				min-height: auto !important;
+				background: transparent !important;
+			}
+		}
+	}
+
+	.galeria-portafolio{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.portafolio-similitudes{
+		background: rgba(0, 0, 0, 0.8);
+		bottom: 0;
+	}
+	//END PORTAFOLIO STYLE
+
+	//CONTACTO
+	#contacto{
+		.col-md-6{
+			margin-top: 20px;
+		}
+	}
+	#contacto-desplegado{
+		p{
+			input[type="radio"]{
+				float: right;
+				margin-left: 10px;
+			}
+		}
+		.form-control{
+			&.captcha{
+				width: 87%;
+			}
+		}
+		.col-md-4{
+			text-align: center;
+		}
+	}
+	//END CONTACTO
+
+
+
+
+	.left-menu-details{
+		display: none;
+
+		&.active{
+			display: inline;
+		}
+	}
+}

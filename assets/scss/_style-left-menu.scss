@@ -1,0 +1,381 @@
+#left-menu{
+	a{
+		img{
+			margin-right: 20px;
+		}
+	}
+	p{
+		@include text-style ($montserrat-r, $size-c, $white-color, $text-weight, uppercase);
+
+		span{
+			font-size: $size-f;
+			padding-left: 20px;
+			vertical-align: middle;
+		}
+	}
+	ul{
+		list-style: none;
+		padding-left: 0px;
+
+		li{
+			line-height: 0.9;
+
+			&.fuchsia{
+				a{
+					&:hover, &.active{
+						color: $fuchsia-color !important;
+					}
+				}
+			}
+			&.green{
+				a{
+					&:hover, &.active{
+						color: $green-color !important;
+					}
+				}
+			}
+			&.aquamarine{
+				a{
+					&:hover, &.active{
+						color: $aquamarine-color !important;
+					}
+				}
+			}
+			&.yellow{
+				a{
+					&:hover, &.active{
+						color: $yellow-color !important;
+					}
+				}
+			}
+
+			a{
+				@include text-style ($passionone-b, $size-j, $white-color, $text-weight, uppercase);
+			}
+		}
+	}
+
+	.col-md-4{
+		background: rgba(0, 0, 0, 0.8);
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 1000;
+		padding: 60px 15px 30px 30px;
+
+		a{
+			&.close-button{
+				display: inline-block;
+				width: 100%;
+				text-align: right;
+				padding-right: 30px;
+				padding-bottom: 80px;
+			}
+		}
+	}
+	.row{
+		&.mail{
+			@include background-images (general, white-mail, png, center left, transparent);
+			margin-left: 0px;
+			margin-top: 10px;
+
+			a{
+				@include text-style ($montserrat-r, $size-c, $white-color, $text-weight, uppercase);
+				display: inline-block;
+				margin: 0px;
+				padding-left: 50px;
+			}
+		}
+		&.bottom-content{
+			margin-left: 0px;
+			margin-right: 0px;
+
+			a{
+				img{
+					&.simple{
+					display: inline;
+					}
+				}
+				&:hover, &.active{
+					img{
+						&.simple{
+							display: none;
+						}
+						&.hidden{
+							display: inline !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.left-menu-details{
+	background: rgba(0, 0, 0, 0.8);
+	padding: 60px 15px 30px 30px;
+
+	a{
+		&.button-menu{
+			background: $white-color;
+			color: $dark-brown-color !important;
+			float: right;
+		}
+		&.special-link{
+			@include text-style ($montserrat-r, $size-c, $white-color, $text-weight);
+			margin-top: 15px;
+			display: inline-block;
+
+			img{
+				margin-right: 10px;
+			}
+		}
+	}
+
+	h1{
+		@include text-style ($passionone-b, $size-j, $white-color, $text-weight, uppercase);
+
+		span{
+			font-family: $passionone-r;
+			font-size: $size-h;
+		}
+	}
+
+	p{
+		@include text-style ($montserrat-r, $size-c, $white-color, $text-weight, uppercase);
+		margin: 0px;
+	}
+
+	ul{
+		li{
+			a{
+				@include text-style ($montserrat-r, $size-c, $white-color, $text-weight, uppercase);
+			}
+
+			&:first-of-type{
+				margin-left: -20px;
+				list-style: none;
+			}
+		}
+	}
+
+	ol{
+		list-style: none;
+		padding-left: 0px;
+		margin-top: 40px;
+
+		li{
+			display: inline;
+			padding: 20px 30px;
+
+			&:first-of-type{
+				@include background-images (general, prev-arrow, png, left center, transparent);
+				margin-right: 50px;
+			}
+
+			&:last-of-type{
+				@include background-images (general, next-arrow, png, right center, transparent);
+			}
+
+			a{
+				@include text-style ($montserrat-r, $size-c, $white-color, $text-weight, uppercase);
+			}
+		}
+	}
+	.row{
+		&.button-access{
+			margin-bottom: 60px;
+			margin-left: 0px !important;
+			margin-right: 0px !important;
+
+			a{
+				@include text-style ($montserrat-r, $size-c, $white-color, $text-weight, uppercase);
+			}
+		}
+	}
+
+	//DETAILS IN COLOR GREEN
+	&.green{
+		h1{
+			color: $green-color !important;
+			line-height: 0.7;
+		}
+		a{
+			&.special-link{
+				color: $green-color;
+			}
+		}
+		ul{
+			padding-left: 20px;
+			margin-top: 35px;
+
+			li{
+				color: $green-color !important;
+
+				&:first-of-type{
+					a{
+						color: $green-color !important;
+					}
+				}
+			}
+		}
+		ol{
+			li{
+				a{
+					color: $green-color !important;
+				}
+			}
+		}
+		.row{
+			&.button-access{
+				a{
+					color: $green-color;
+
+					img{
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+	}
+
+	//DETAILS IN COLOR FUCHSIA
+	&.fuchsia{
+		h1{
+			color: $fuchsia-color !important;
+			line-height: 0.7;
+		}
+		a{
+			&.special-link{
+				color: $fuchsia-color;
+			}
+		}
+		ul{
+			padding-left: 20px;
+			margin-top: 35px;
+
+			li{
+				color: $fuchsia-color !important;
+
+				&:first-of-type{
+					a{
+						color: $fuchsia-color !important;
+					}
+				}
+			}
+		}
+		ol{
+			li{
+				a{
+					color: $fuchsia-color !important;
+				}
+			}
+		}
+		.row{
+			&.button-access{
+				a{
+					color: $fuchsia-color;
+
+					img{
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+	}
+
+	//DETAILS IN COLOR YELLOW
+	&.yellow{
+		h1{
+			color: $yellow-color !important;
+			line-height: 0.7;
+		}
+		a{
+			&.special-link{
+				color: $yellow-color;
+			}
+		}
+		ul{
+			padding-left: 20px;
+			margin-top: 35px;
+
+			li{
+				color: $yellow-color !important;
+
+				&:first-of-type{
+					a{
+						color: $yellow-color !important;
+					}
+				}
+			}
+		}
+		ol{
+			li{
+				a{
+					color: $yellow-color !important;
+				}
+			}
+		}
+		.row{
+			&.button-access{
+				a{
+					color: $yellow-color;
+
+					img{
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+	}
+
+	//DETAILS IN COLOR AQUAMARINE
+	&.aquamarine{
+		h1{
+			color: $aquamarine-color !important;
+			line-height: 0.7;
+		}
+		a{
+			&.special-link{
+				color: $aquamarine-color;
+			}
+		}
+		ul{
+			padding-left: 20px;
+			margin-top: 35px;
+
+			li{
+				color: $aquamarine-color !important;
+
+				&:first-of-type{
+					a{
+						color: $aquamarine-color !important;
+					}
+				}
+			}
+		}
+		ol{
+			li{
+				a{
+					color: $aquamarine-color !important;
+				}
+			}
+		}
+		.row{
+			&.button-access{
+				a{
+					color: $aquamarine-color;
+
+					img{
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+
+//MARGEN INFERIOR PARA LISTAS ESPECIFICAS.
+#left-menu-dw, #left-menu-branding, #left-menu-dg, #left-menu-media{
+	@extend %margin-bottom;
+}

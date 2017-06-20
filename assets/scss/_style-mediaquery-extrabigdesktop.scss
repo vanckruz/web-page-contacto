@@ -1,0 +1,26 @@
+//MEDIA QUERY BIGDESKTOP MORE THEN 1575PX
+//****************************************
+@include generate-media-query (extrabigdesktop){
+	#portafolio{
+		.col-md-6{
+			min-height: 500px;
+
+			&.left{
+				.col-md-12{
+					float: right;
+				}
+			}
+		}
+	}
+	.galeria-portafolio{
+    	.col-md-4{
+    		&.item{
+    			width: 25% !important;
+
+    			&.extra{
+    				display: inline;
+    			}
+    		}
+    	}
+    }
+}

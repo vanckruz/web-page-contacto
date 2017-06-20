@@ -1,0 +1,119 @@
+//MIXIN USE TO GENERATE THE PREFIXES OF DIFERENTS PROPERTIES
+@mixin generate-prefixes ($property, $value, $prefixes: webkit moz o ms){
+	#{$property}: #{$value};
+
+	@each $once-prefix in $prefixes{
+		#{'-'+$once-prefix+'-'+$property}: #{$value};
+	}
+}
+
+//MIXIN USE TO GENERATE THE MEDIA QUERY
+@mixin generate-media-query ($screen-size){
+	@if map-has-key($size-media-query, $screen-size){
+		@if ($screen-size == mobile){
+			@media only screen and (max-width: #{map-get($size-media-query, $screen-size)}){
+        	@content; }
+	    }@else if $screen-size == tablet{
+	      	$value: mobile;
+	      	$minimo: map-get($size-media-query, $value) + 1;
+
+	      	@media only screen and (min-width: $minimo) and (max-width: #{map-get($size-media-query, $screen-size)}){
+	        	@content; }
+	    }@else if $screen-size == mini-desktop{
+          $value: tablet;
+          $minimo: map-get($size-media-query, $value) + 1;
+
+          @media only screen and (min-width: $minimo) and (max-width: #{map-get($size-media-query, $screen-size)}){
+            @content; }
+      }@else if $screen-size == desktop{
+	      	$value: mini-desktop;
+	      	$minimo: map-get($size-media-query, $value) + 1;
+
+	      	@media only screen and (min-width: $minimo) and (max-width: #{map-get($size-media-query, $screen-size)}){
+	        	@content; }
+	    }@else if $screen-size == bigdesktop{
+	      	@media only screen and (min-width: #{map-get($size-media-query, $screen-size)}){
+	        	@content; }
+	    }@else if $screen-size == extrabigdesktop{
+          @media only screen and (min-width: #{map-get($size-media-query, $screen-size)}){
+            @content; }
+      }
+    }@else{
+    	@warm "No existe este Media Query: #{$screen-size}";
+  	}
+}
+
+//MIXIN USE TO DEFINE A BACKGROUND
+@mixin background-images ($container, $image-name, $format, $position:center, $color:transparent, $size: 0){
+	@if (map-has-key($image-directory, $container)){
+    	$final-directory: map-get($image-directory, $container);
+    	background: url($final-directory+$image-name+'.'+$format) no-repeat $position $color;
+
+    	@if ($size != 0){
+    		background-size: $size;
+    	}
+  	}
+}
+
+//MIXIN USE TO DEFINE A DOBLE BACKGROUND
+@mixin background-images-doble ($container-a, $image-name-a, $format-a, $container-b, $image-name-b, $format-b, $position-a:center, $size-a: 0, $position-b:center, $color-b:transparent, $size-b: 0){
+	@if (map-has-key($image-directory, $container-a) and map-has-key($image-directory, $container-b)){
+    	$final-directory-a: map-get($image-directory, $container-a);
+    	$final-directory-b: map-get($image-directory, $container-b);
+
+    	background: url($final-directory-a+$image-name-a+'.'+$format-a) no-repeat $position-a, url($final-directory-b+$image-name-b+'.'+$format-b) no-repeat $position-b $color-b;
+
+    	@if ($size-a != 0){
+    		background-size: $size-a;
+    	}@else if($size-b != 0){
+    		background-size: $size-b;
+    	}
+  	}
+}
+
+//MIXIN USE TO DEFINE A SINGLE FUND FOR EACH CHILD OF AN ELEMENT
+@mixin background-images-for ($operation, $element, $container, $image-name, $format, $num_element, $position:center, $color:transparent){
+  @for $i from 0 through $num_element {
+      $counter : $i + 1;
+      @if ($counter <= $num_element){
+        @if ($operation == 1){
+          #{$element}:nth-of-type#{'('+$counter+')'} {@include background-images($container, $image-name + $counter, $format, $position, $color);}
+        }@else if($operation == 2){
+          #{$element}:nth-of-type#{'('+$counter+')'} {@include background-images($container, $image-name, $format, $position, $color);}
+        }
+      }
+    }
+}
+
+//MIXINS USE TO DEFINE GENERIC STYLE TO TEXT
+@mixin text-style ($font: $text-family, $size: $text-size, $color: $text-color, $weight: $text-weight, $transform: $text-transform){
+  	font-family: $font;
+  	font-size: $size;
+  	color: $color;
+  	font-weight: $weight;
+  	text-transform: $transform;
+}
+
+//MIXIN USE TO DEFINE LATERAL PADDING
+@mixin lateral-padding ($padding-left, $padding-right){
+  	padding-left: $padding-left;
+  	padding-right: $padding-right;
+}
+
+//MIXIN USE TO DEFINE TOP AND BOTTOM PADDING
+@mixin top-and-bottom-padding ($padding-top, $padding-bottom){
+  	padding-top: $padding-top;
+  	padding-bottom: $padding-bottom;
+}
+
+//MIXIN USE TO DEFINE LATERAL MARGIN
+@mixin lateral-margin ($margin-left, $margin-right){
+    margin-left: $margin-left;
+    margin-right: $margin-right;
+}
+
+//MIXIN USE TO DEFINE MARGIN TOP AND BOTTOM
+@mixin top-and-bottom-margin ($margin-top, $margin-bottom){
+	margin-top: $margin-top;
+	margin-bottom: $margin-bottom;
+}

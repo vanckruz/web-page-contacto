@@ -1,0 +1,170 @@
+//MEDIA QUERY DESKTOP 991PX - 
+//******************************
+@include generate-media-query (mini-desktop){
+	//STYLE HEADER
+	header{
+		section{
+			&#header{
+				.col-md-4{
+					margin-top: 20px;
+
+					&.logo{
+						margin-top: 0px;
+					}
+				}
+			}
+		}
+	}
+	//END STYLE HEADER
+
+	//STYLE LEFT MENU
+	#left-menu{
+		.col-md-4{
+			position: fixed;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			padding: 15px !important;
+
+			a{
+				&.close-button{
+					padding-bottom: 20px;
+				}
+			}
+
+			ul{
+				li{
+					a{
+						font-size: 42px;
+					}
+				}
+			}
+		}
+	}
+	//STYLE LEFT MENU
+
+	//NOSOTROS STYLE
+	#coconut-details{
+		.container-fluid{
+			.col-md-6{
+				&:last-of-type{
+					a{
+						&.close-button{
+							position: absolute;
+							top: 5px;
+							right: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
+	//END NOSOTROS STYLE
+
+	//PORTAFOLIO STYLE
+	#portafolio{
+		.col-md-6{
+			h2{
+				font-size: $size-i;
+
+				span{
+					font-size: $size-g;
+				}
+			}
+			.col-md-12{
+				img{
+					&.responsive-pimg{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	.galeria-portafolio{
+		background: rgba(0, 0, 0, 0.8);
+		position: absolute;
+		bottom: 0;
+
+		.col-md-4{
+			&.left-menu-details{
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+			}
+			&.item{
+				img{
+					//min-height: 215px;
+				}
+			}
+		}
+	}
+
+	.portafolio-similitudes{
+		background: rgba(0, 0, 0, 0.8);
+		position: absolute;
+		bottom: 0;
+
+		.col-md-6{
+			&.left-menu-details{
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+			}
+		}
+	}
+	//END PORTAFOLIO STYLE
+
+	//CONTACTO
+	#contacto{
+		.col-md-6{
+			&.phone{
+				text-align: left;
+				padding-left: 30px;
+			}
+		}
+		.row{
+			&.mail{
+				text-align: left;
+				float: right;
+			}
+		}
+	}
+	#contacto-desplegado{
+		p{
+			input[type="radio"]{
+				float: right;
+				margin-left: 10px;
+			}
+		}
+		.form-control{
+			&.captcha{
+				width: 91%;
+			}
+		}
+		.col-md-4{
+			text-align: center;
+		}
+	}
+	//END CONTACTO
+
+	#left-menu-pd-web, #left-menu-pd-branding, #left-menu-pd, #left-menu-pd-media{
+		display: none;
+
+		&.active{
+			display: inline;
+		}
+	}
+
+	//VIDEO
+	.col-md-12{
+		&.video-section{
+			text-align: center;
+			padding-top: 60px;
+		}
+	}
+	//VIDEO
+}

@@ -1,0 +1,202 @@
+//MEDIA QUERY MOBILE MAX 451PX 
+//******************************
+@include generate-media-query (mobile){
+	//STYLE HEADER
+	header{
+		section{
+			&#header{
+				text-align: center;
+				padding-top: 30px;
+
+				.col-md-4{
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+	//END STYLE HEADER
+
+	//STYLE FOOTER
+	footer{
+		
+	}
+	//END STYLE FOOTER
+
+	//STYLE LEFT MENU
+	#left-menu{
+		width: 100%;
+
+		a{
+			img{
+				margin-right: 0px !important;
+			}
+		}
+
+		ul{
+			li{
+				a{
+					font-size: 42px;
+				}
+			}
+		}
+
+		.col-md-4{
+			position: fixed;
+			bottom: 0;
+			padding: 15px !important;
+
+			a{
+				&.close-button{
+					padding-bottom: 20px;
+				}
+			}
+		}
+		.row{
+			&.mail{
+				p{
+					font-size: $size-b;
+				}
+			}
+		}
+	}
+	.left-menu-details{
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+
+		a{
+			&.button-menu{
+				margin-top: 20px;
+				float: none !important;
+			}
+		}
+		h1{
+			font-size: $size-i;
+
+			span{
+				font-size: $size-h;
+			}
+		}
+		ol{
+			li{
+				margin-top: 15px;
+			}
+		}
+		.row{
+			&.button-access{
+				text-align: center !important;
+			}
+		}
+	}
+	//STYLE LEFT MENU
+
+	//NOSOTROS STYLE
+	#coconut-details{
+		.container-fluid{
+			.col-md-6{
+				@include lateral-padding (30px !important, 30px !important);
+				text-align: center !important;
+
+				&:last-of-type{
+					a{
+						&.close-button{
+							display: inline-block;
+							width: 100%;
+							text-align: right;
+							margin-bottom: 60px;
+						}
+					}
+				}
+			}
+			.row{
+				&.special-list{
+					img{
+						display: none !important;
+					}
+				}
+			}
+		}
+	}
+	//END NOSOTROS STYLE
+
+	//PORTAFOLIO STYLE
+	#portafolio{
+		.col-md-6{
+			min-height: auto !important;
+
+			h2{
+				font-size: $size-i;
+
+				span{
+					font-size: $size-g;
+				}
+			}
+
+			.col-md-12{
+				min-height: auto !important;
+				background: transparent !important;
+			}
+		}
+	}
+
+	.galeria-portafolio{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.portafolio-similitudes{
+		background: rgba(0, 0, 0, 0.8);
+		bottom: 0;
+	}
+	//END PORTAFOLIO STYLE
+
+	//CONTACTO
+	#contacto{
+		h2{
+			font-size: $size-h;
+		}
+
+		p{
+			font-size: $size-b;
+
+			span{
+				font-size: $size-e;
+			}
+		}
+
+		.col-md-6{
+			margin-top: 20px;
+		}
+	}
+	#contacto-desplegado{
+		text-align: center;
+
+		p{
+			input[type="radio"]{
+				display: inline-block;
+				width: 100%;
+			}
+
+			span{
+				&.captcha{
+					float: none !important;
+				}
+			}
+		}
+		.col-md-4{
+			text-align: center;
+		}
+	}
+	//END CONTACTO
+
+
+
+	.left-menu-details{
+		display: none;
+
+		&.active{
+			display: inline;
+		}
+	}
+}

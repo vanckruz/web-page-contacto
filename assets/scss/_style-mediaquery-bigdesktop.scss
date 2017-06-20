@@ -1,0 +1,183 @@
+//MEDIA QUERY BIGDESKTOP MORE THEN 992PX
+//****************************************
+@include generate-media-query (bigdesktop){
+	//STYLE HEADER
+	header{
+		min-height: 1000px;
+		position: relative;
+
+		section{
+			&#header{
+				.col-md-4{
+					&.logo{
+						text-align: left;
+					}
+					&.language{
+						text-align: center;
+					}
+					&.menu{
+						text-align: right;
+					}
+				}
+			}
+		}
+	}
+	//END STYLE HEADER
+
+	//STYLE LEFT MENU
+	#left-menu{
+		.col-md-4{
+			position: fixed !important;
+			bottom: 0;
+			min-width: 479px;
+			max-width: 480px;
+		}
+		.row{
+			&.bottom-content{
+				position: absolute;
+				bottom: 30px;
+				left: 30px;
+			}
+		}
+	}
+	.left-menu-details{
+		.less-options-button{
+			display: none;
+		}
+	}
+	//STYLE LEFT MENU
+
+	//NOSOTROS STYLE
+	#coconut-details{
+		.container-fluid{
+			.col-md-6{
+				min-height: 755px;
+				
+				&:first-of-type{
+					padding-left: 10%;
+				}
+				&:last-of-type{
+					padding-right: 10%;
+
+					a{
+						&.close-button{
+							position: absolute;
+							top: 40px;
+							left: 480px;
+						}
+					}
+				}
+			}
+		}
+	}
+	//END NOSOTROS STYLE
+
+	//PORTAFOLIO STYLE
+	#portafolio{
+		.container-fluid{
+			.col-md-6{
+				&.left{
+					.col-md-12{
+						float: right;
+					}
+				}
+				.col-md-12{
+					max-width: 800px !important;
+					min-height: 500px;
+
+					ul{
+						padding-left: 15px !important;
+					}
+					img{
+						&.responsive-pimg{
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.galeria-portafolio{
+		background: rgba(0, 0, 0, 0.8);
+
+		.col-md-4{
+			&.item{
+				img{
+					min-height: 210px;
+				}
+			}
+			&.left-menu-details{
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+			}
+		}
+		.row{
+			&.options{
+				display: none;
+			}
+		}
+	}
+
+	.portafolio-similitudes{
+		bottom: 0;
+		
+		.col-md-6{
+			&.left-menu-details{
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+			}
+		}
+		.row{
+			&.options{
+				display: none;
+			}
+		}
+	}
+	//END PORTAFOLIO STYLE
+
+	//CONTACTO
+	#contacto{
+		.col-md-6{
+			&.phone{
+				text-align: left;
+				padding-left: 30px;
+			}
+		}
+		.row{
+			&.mail{
+				text-align: left;
+				float: right;
+			}
+		}
+	}
+	#contacto-desplegado{
+		p{
+			input[type="radio"]{
+				float: right;
+				margin-right: 10px;
+			}
+		}
+		.form-control{
+			&.little{
+				width: 55%;
+			}
+			&.captcha{
+				width: 67%;
+			}
+		}
+	}
+	//END CONTACTO
+
+	//BUTTON VIDEO
+	#play-button{
+		position: absolute;
+		top: 230px;
+		left: 500px;
+	}
+	//BUTTON VIDEO
+}

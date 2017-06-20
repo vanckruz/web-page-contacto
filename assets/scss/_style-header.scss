@@ -1,0 +1,23 @@
+header{	
+	@include background-images (general, prueba, png, top center, transparent, cover);
+	min-height: 100vh;
+
+	section{
+		&#header{
+			@include top-and-bottom-padding (60px, 20px);
+		}
+	}
+	.col-md-4{
+		&.logo{
+			img{
+				width: 100%;
+				max-width: 297px;
+			}
+		}
+	}
+	.language-button{
+		&:first-of-type{
+			margin-right: 10px;
+		}
+	}
+}

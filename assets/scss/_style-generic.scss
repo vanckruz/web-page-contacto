@@ -1,0 +1,101 @@
+a{
+	&:hover, &:active, &:focus{
+		text-decoration: none !important;
+	}
+}
+
+span{
+	&.dark-brown{
+		color: $dark-brown-color !important;
+	}
+	&.light-brown{
+		color: $light-brown-color !important;
+	}
+	&.white{
+		color: $white-color !important;
+	}
+}
+
+section{
+	&.dark-brown{
+		@include top-and-bottom-padding (30px, 30px);
+		background: $dark-brown-color;
+		text-align: center;
+
+		h2{
+			@include text-style ($passionone-b, $size-i, $white-color, $text-transform, uppercase);
+			padding: 0px;
+			margin: 0px;
+		}
+	}
+}
+
+//STYLE USE TO INVISIBLE SECTIONS
+#coconut-vm, #contacto-vm{
+	display: inline-block;
+
+	&.active{
+		display: none;
+	}
+}
+
+#contacto-desplegado, .galeria-portafolio, #portafolio-grafico,
+#portafolio-web, #portafolio-branding, #portafolio-media, #left-menu{
+	display: none;
+
+	&.active{
+		display: inline;
+	}
+}
+
+#coconut-details{
+	display: none;
+
+	&.active{
+		display: block;
+	}
+}
+
+#portafolio-detalles, #portafolio-grafico, #portafolio-web{
+	&.active{
+		#contacto{
+			padding-top: 60px !important;
+		}
+	}
+}
+
+//VIDEO STILE
+video{
+ 	background: rgba(235, 235, 235, 0.9);
+	position: fixed;
+	top: 0px;
+    left: 0px;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 10000;
+    display: none;
+			    
+	&.active{
+		display: inline;
+	}
+}
+
+#close-button-video{
+	position: fixed;
+	top: 30px;
+	right: 30px;
+	z-index: 10001;
+	display: none;
+
+	&.active{
+		display: inline;
+	}
+}
+
+#play-button{
+	img{
+		width: 100%;
+		min-width: 99px;
+		max-width: 100px;
+	}
+}

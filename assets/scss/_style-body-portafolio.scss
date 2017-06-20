@@ -1,0 +1,253 @@
+#group{
+	position: relative !important;
+}
+#portafolio{
+	h2{
+		@include text-style ($passionone-b, $size-k, $dark-brown-color, $text-weight, uppercase);
+		margin-top: 60px;	
+		margin-bottom: 0px;
+		line-height: 0.5;
+
+		span{
+			font-family: $passionone-r;
+			font-size: $size-i;
+			display: inline-block;
+			margin-bottom: 20px;
+			width: 100%;
+		}
+	}
+
+	ul{
+		padding-left: 20px;
+
+		li{
+			@include text-style ($montserrat-r, $size-c, $dark-brown-color, $text-weight, uppercase);
+		}
+	}
+
+	img{
+		width: 100%;
+		margin-top: 15px;
+	}
+
+	.container-fluid{
+		@include lateral-padding (0px, 0px);
+		//max-width: 1350px;
+	}
+
+	.col-md-6{
+		min-height: 400px;
+
+		&.left{
+			background: -webkit-linear-gradient(top, $gradiente-grey-a, $gradiente-grey-b, $gradiente-grey-c, $gradiente-grey-d, $gradiente-grey-e, $gradiente-grey-f, $gradiente-grey-g, $gradiente-grey-h);
+			
+		}
+		&.right{
+			background: -webkit-linear-gradient(bottom, $gradiente-grey-a, $gradiente-grey-b, $gradiente-grey-c, $gradiente-grey-d, $gradiente-grey-e, $gradiente-grey-f, $gradiente-grey-g, $gradiente-grey-h);
+		}
+		&:hover{
+			cursor: pointer;
+		}
+
+		&#diseno-desarrollo{
+			.col-md-12{
+				@include background-images (general, principal-1, png, center right, transparent, 55%);
+				min-height: 400px;
+			}
+
+			&:hover, &.active{
+				background: $fuchsia-color;
+			}
+		}
+
+		&#branding-identidad{
+			.col-md-12{
+				@include background-images (general, principal-2, png, center right, transparent, 65%);
+				min-height: 400px;
+			}
+
+			&:hover, &.active{
+				background: $yellow-color;
+			}
+		}
+
+		&#diseno-grafico{
+			.col-md-12{
+				@include background-images (general, principal-3, png, center right, transparent, 65%);
+				min-height: 400px;
+			}
+
+			&:hover, &.active{
+				background: $green-color;
+			}
+		}
+
+		&#social-media{
+			.col-md-12{
+				@include background-images (general, principal-4, png, bottom right, transparent, 75%);
+				min-height: 400px;
+
+				h2{
+					line-height: 0.7;
+				}
+			}
+
+			&:hover, &.active{
+				background: $aquamarine-color;
+			}
+		}
+	}
+	.col-md-12{
+		@include lateral-padding (0px, 0px);
+	}
+}
+
+//STYLE GENERIC TO ALL GALLERYS
+.galeria-portafolio{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+
+	.container-fluid{
+		@include lateral-padding (0px, 0px);
+		//max-width: 1350px;
+	}
+	.col-md-4{
+		&.item{
+			@include lateral-padding (0px, 0px);
+
+			img{
+				width: 100%;
+			}
+
+			&.extra{
+				display: none;
+			}
+
+			&:hover{
+				cursor: pointer;
+
+				.row{
+					&.details{
+						visibility: visible !important;
+					}
+				}
+			}
+			.row{
+				&.details{
+					padding: 25px;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					visibility: hidden;
+
+					p{
+						@include text-style ($montserrat-r, $size-e, $dark-brown-color, $text-weight, uppercase);
+						margin: 0px;
+						line-height: 0.8;
+
+						span{
+							font-size: $size-c;
+						}
+					}
+				}
+			}
+		}
+	}
+	.col-md-8{
+		@include lateral-padding (0px, 0px);
+	}
+	.row{
+		margin-right: 0px;
+		margin-left: 0px;	
+
+		&.options{
+			background: rgba(0, 0, 0, 0.8);
+			padding: 10px;
+			text-align: center;
+		}
+	}
+
+	//DETAILS IN COLOR FUCHSIA
+	&.fuchsia{
+		.row{
+			&.details{
+				background: $fuchsia-color;
+			}
+		}
+	}
+
+	//DETAILS IN COLOR YELLOW
+	&.yellow{
+		.row{
+			&.details{
+				background: $yellow-color;
+			}
+		}
+	}
+
+	//DETAILS IN COLOR GREEN
+	&.green{
+		.row{
+			&.details{
+				background: $green-color;
+			}
+		}
+	}
+
+	//DETAILS IN COLOR AQUAMARINE
+	&.aquamarine{
+		.row{
+			&.details{
+				background: $aquamarine-color;
+			}
+		}
+	}
+}
+
+//STYLE GENERIC TO PORTFOLIO SECTIONS
+.portafolio-similitudes{
+	background: rgba(0, 0, 0, 0.8);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+
+	.container-fluid{
+		@include lateral-padding (0px, 0px);
+		//max-width: 1350px;
+	}
+	.col-md-6{
+		&.content{
+			@include top-and-bottom-padding (15px, 15px);
+			background: $light-grey;
+			text-align: right;
+
+			img{
+				width: 100%;
+				max-width: 658px;
+			}
+
+			.row{
+				&.little-view{
+					margin-left: 0px;
+					margin-right: 0px;
+					max-height: 430px;
+					overflow: overlay;
+				}
+			}
+		}
+	}
+	.row{
+		&.options{
+			background: rgba(0, 0, 0, 0.8);
+			padding: 10px;
+			text-align: center;
+			margin: 0px;
+		}
+	}
+}

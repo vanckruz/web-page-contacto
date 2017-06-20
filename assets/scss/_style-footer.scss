@@ -1,0 +1,9 @@
+footer{
+	@include top-and-bottom-padding (20px, 20px);
+	text-align: center;
+	
+	p{
+		@include text-style ($montserrat-r, $size-b, $black-color, $text-weight, uppercase);
+		margin: 0px;
+	}
+}
